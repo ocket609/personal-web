@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  align-items: center;
+}
+.main-content {
+  padding-right: 24px;
+}
+.main-content ul {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.main-content a {
+  display: block;
+  padding: 9px;
+}
+.main-content img {
+  width: 38px;
+}
+.main-img img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=index.css.map */

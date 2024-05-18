@@ -1,0 +1,25 @@
+// main
+.main {
+    display: flex;
+    align-items: center;
+    &-content {
+        ul {
+            display: flex;
+            column-gap: 16px;
+        }
+        padding-right: 24px;
+        a {
+            display: block;
+            padding: 9px;
+        }
+        img {
+            width: 38px;
+        }
+    }
+    &-img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

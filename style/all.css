@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 全域 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  outline: 1px solid #000;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.2;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+/* 容器 */
+.container {
+  width: 1296px;
+  margin: 0 auto;
+}
+
+/* RWD */
+/*  */
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.lh-1_5 {
+  line-height: 1.5;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.color-primary {
+  color: #3B3B3B;
+}
+
+.color-secondary {
+  color: #5B5B5B;
+}
+
+.color-success {
+  color: #C1C1C1;
+}
+
+.color-black {
+  color: #000;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.header {
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 28px 0;
+}
+.header ul {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  /*.nav-top-TR:hover {}*/
+}
+.header ul a {
+  display: block;
+  position: relative;
+  color: #000;
+  padding: 4px 8px;
+}
+.header ul .nav-top:hover {
+  font-weight: 600;
+}
+.header ul .nav-top:hover::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #919191;
+  border-left: 1px solid #919191;
+}
+.header ul .nav-top:hover::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  right: 0;
+  border-top: 1px solid #919191;
+  border-right: 1px solid #919191;
+}
+.header ul .nav-bottom:hover::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #919191;
+  border-left: 1px solid #919191;
+}
+.header ul .nav-bottom:hover::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #919191;
+  border-right: 1px solid #919191;
+}
+.header .list {
+  display: none;
+}
+.header .list span {
+  color: #000;
+  font-size: 40px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+.main-content {
+  padding-right: 24px;
+}
+.main-content ul {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.main-content a {
+  display: block;
+  padding: 9px;
+}
+.main-content img {
+  width: 38px;
+}
+.main-img img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=all.css.map */
