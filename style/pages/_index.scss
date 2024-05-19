@@ -1,0 +1,79 @@
+// main
+.main {
+    display: flex;
+    align-items: center;
+    color: #5B5B5B;
+    &-content {
+        padding-right: 24px;
+        ul {
+            display: flex;
+            column-gap: 16px;
+            padding-top: 60px;
+        }
+        a {
+            display: block;
+            padding: 9px;
+        }
+        img {
+            width: 38px;
+        }
+        span {
+            position: relative;
+            background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/mark.png);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 100%;
+            padding: 0 8px;
+        }
+    }
+    &-img {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .hero-img-sm {
+        display: none;
+    }
+}
+@include pad-s {
+    .main {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        &-content {
+            padding: 20px 12px;
+            text-align: center;
+            ul {
+                justify-content: center;
+            }
+        }
+    }
+    .h1-m {
+        font-size: 32px;
+		font-weight: 700;
+    }
+}
+@include mobile {
+    .main {
+        .hero-img-lg {
+            display: none;
+        }
+        .hero-img-sm {
+            display: block;
+        }
+        &-content {
+            padding: 40px 53.5px;
+            ul {
+                padding-top: 24px;
+            }
+            a {
+                padding: 0;
+            }
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+
+// works
