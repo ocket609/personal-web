@@ -77,3 +77,136 @@
 }
 
 // works
+.works {
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        h2 {
+            margin: 0 16px;
+        }
+    }
+    &-title-img-m {
+        display: none;
+    }
+    &-ticket {
+        background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-ticket-img {
+        padding-top: 80px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &-card {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba($color: #fff, $alpha: 0.1);
+        border-radius: 24px;
+        padding: 80px 40px 56px;
+        ul {
+            display: flex;
+            column-gap: 16px;
+            padding-right: 123px;
+            margin: 24px 0 40px;
+            p {
+                display: block;
+                color: #3B3B3B;
+                background: #fff;
+                border-radius: 16px;
+                padding: 4px 12px;
+            }
+        }
+        a {
+            display: inline-block;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #000;
+            padding: 16px 32px;
+        }
+        span {
+            // 垂直置中
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 8px;
+        }
+    }
+    &-card-items {
+        border-bottom: 1px solid #F1F1F1;
+        margin-bottom: 40px;
+    }
+}
+@include ps-s {
+    .works {
+        &-content {
+            padding: 0 40px;
+        }
+        &-ticket-img {
+            padding-top: 80px;
+        }
+        &-card {
+            padding: 40px 24px;
+            margin-left: 20px;
+            ul {
+                column-gap: 8px;
+                padding-right: 0;
+            }
+        }
+    }
+}
+@include pad {
+    .works {
+        &-ticket {
+            background-image: none;
+        }
+        &-content {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+        &-ticket-img {
+            background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 93px;
+        }
+        &-card {
+            padding: 24px 24px 48px;
+            margin-left: 0;
+            ul {
+                column-gap: 12px;
+                padding-right: 0;
+            }
+        }
+    }
+}
+@include pad-s {
+    .works {
+        &-title-img {
+            display: none;
+        }
+        &-title-img-m {
+            display: block;
+        }
+        &-card {
+            ul {
+                column-gap: 12px;
+                padding-right: 0;
+            }
+        }
+    }
+}
