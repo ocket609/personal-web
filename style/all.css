@@ -119,6 +119,14 @@ h4 {
   font-weight: 600;
 }
 
+@media (max-width: 576px) {
+  .fw-m-700 {
+    font-weight: 700;
+  }
+  .fw-m-600 {
+    font-weight: 600;
+  }
+}
 .fz-16 {
   font-size: 16px;
 }
@@ -152,6 +160,11 @@ h4 {
   color: #fff;
 }
 
+@media (max-width: 992px) {
+  .color-secondary-ps {
+    color: #5B5B5B;
+  }
+}
 .pb-8 {
   padding-bottom: 8px;
 }
@@ -426,6 +439,9 @@ h4 {
   vertical-align: middle;
   padding-left: 8px;
 }
+.works-card-none {
+  display: none;
+}
 .works-card-items {
   border-bottom: 1px solid #F1F1F1;
   margin-bottom: 40px;
@@ -433,36 +449,36 @@ h4 {
 
 @media (max-width: 992px) {
   .works-content {
-    padding: 0 40px;
-  }
-  .works-ticket-img {
-    padding-top: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .works-card {
     padding: 40px 24px;
-    margin-left: 20px;
   }
   .works-card ul {
     -moz-column-gap: 8px;
          column-gap: 8px;
     padding-right: 0;
   }
+  .works-card ul p {
+    background: #F1F1F1;
+  }
+  .works-card-m-none {
+    display: none;
+  }
+  .works-card-m-block {
+    display: block;
+  }
+  .works-card-items {
+    text-align: center;
+  }
+  .works-card-items h3 {
+    color: #1E1E1E;
+  }
 }
 @media (max-width: 768px) {
-  .works-ticket {
-    background-image: none;
-  }
   .works-content {
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 0;
-  }
-  .works-ticket-img {
-    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 93px;
   }
   .works-card {
     padding: 24px 24px 48px;
@@ -471,7 +487,6 @@ h4 {
   .works-card ul {
     -moz-column-gap: 12px;
          column-gap: 12px;
-    padding-right: 0;
   }
 }
 @media (max-width: 576px) {
@@ -481,9 +496,32 @@ h4 {
   .works-title-img-m {
     display: block;
   }
+  .works-ticket-img {
+    padding: 93px 40px 0;
+  }
   .works-card ul {
     -moz-column-gap: 12px;
          column-gap: 12px;
-    padding-right: 0;
+  }
+}
+@media (max-width: 375px) {
+  .works-title {
+    padding: 40px 0;
+  }
+  .works-title h2 {
+    font-size: 24px;
+  }
+  .works-card ul {
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+    padding: 16px 10px 20px;
+    margin: 0px;
+  }
+  .works-card a {
+    padding: 8px 16px;
+  }
+  .works-card-items {
+    border-bottom: 0px;
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=all.css.map */

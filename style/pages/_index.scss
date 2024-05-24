@@ -78,6 +78,7 @@
 
 // works
 .works {
+    // title
     &-title {
         display: flex;
         justify-content: center;
@@ -91,6 +92,7 @@
     &-title-img-m {
         display: none;
     }
+    // ticket
     &-ticket {
         background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png);
         background-size: cover;
@@ -144,6 +146,9 @@
             padding-left: 8px;
         }
     }
+    &-card-none {
+        display: none;
+    }
     &-card-items {
         border-bottom: 1px solid #F1F1F1;
         margin-bottom: 40px;
@@ -152,61 +157,90 @@
 @include ps-s {
     .works {
         &-content {
-            padding: 0 40px;
-        }
-        &-ticket-img {
-            padding-top: 80px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &-card {
             padding: 40px 24px;
-            margin-left: 20px;
             ul {
                 column-gap: 8px;
                 padding-right: 0;
+                p {
+                    background: #F1F1F1;
+                }
+            }
+        }
+        &-card-m-none {
+            display: none;
+        }
+        &-card-m-block {
+            display: block;
+        }
+        &-card-items {
+            text-align: center;
+            h3 {
+                color: #1E1E1E;
             }
         }
     }
 }
 @include pad {
     .works {
-        &-ticket {
-            background-image: none;
-        }
         &-content {
-            flex-wrap: wrap;
-            justify-content: center;
             padding: 0;
-        }
-        &-ticket-img {
-            background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work1-bg.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding-top: 93px;
         }
         &-card {
             padding: 24px 24px 48px;
             margin-left: 0;
             ul {
                 column-gap: 12px;
-                padding-right: 0;
             }
         }
     }
 }
 @include pad-s {
     .works {
+        // title
         &-title-img {
             display: none;
         }
         &-title-img-m {
             display: block;
         }
+        // ticket
+        &-ticket-img {
+            padding: 93px 40px 0;
+        }
         &-card {
             ul {
                 column-gap: 12px;
-                padding-right: 0;
             }
+        }
+    }
+}
+@include mobile {
+    .works {
+        // title
+        &-title {
+            padding: 40px 0;
+            h2 {
+                font-size: 24px;
+            }
+        }
+        // ticket
+        &-card {
+            ul {
+                column-gap: 8px;
+                padding: 16px 10px 20px;
+                margin: 0px;
+            }
+            a {
+                padding: 8px 16px;
+            }
+        }
+        &-card-items {
+            border-bottom: 0px;
+            margin-bottom: 0px;
         }
     }
 }
