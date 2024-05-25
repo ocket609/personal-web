@@ -300,12 +300,20 @@ h4 {
   }
 }
 .main {
-  display: flex;
-  align-items: center;
   color: #5B5B5B;
+  position: relative;
 }
-.main-content {
-  padding-right: 24px;
+.main::after {
+  position: absolute;
+  content: "";
+  width: 948px;
+  height: 100%;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/hero-lg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 .main-content ul {
   display: flex;
@@ -332,15 +340,24 @@ h4 {
   max-width: 100%;
   height: auto;
 }
-.main .hero-img-sm {
+.main .hero-img-sm, .main .hero-img-lg {
   display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .main {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
+  .main::after {
+    display: none;
+  }
+  .main .hero-img-lg {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
   .main-content {
     padding: 20px 12px;
     text-align: center;
@@ -371,6 +388,36 @@ h4 {
   }
   .main-content img {
     width: 40px;
+  }
+}
+.index-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.index-title h2 {
+  margin: 0 16px;
+}
+.index-title-img-m {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .index-title-img {
+    display: none;
+  }
+  .index-title-img-m {
+    display: block;
+  }
+}
+@media (max-width: 375px) {
+  .index-title {
+    padding: 40px 0;
+  }
+  .index-title h2 {
+    font-size: 24px;
   }
 }
 .works-title {
@@ -410,6 +457,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
   border-radius: 24px;
   padding: 80px 40px 56px;
 }
@@ -446,6 +494,48 @@ h4 {
   border-bottom: 1px solid #F1F1F1;
   margin-bottom: 40px;
 }
+.works-APP {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work2-lg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 200px 0;
+}
+.works-APP::after {
+  position: absolute;
+  content: "";
+  width: 948px;
+  height: 100%;
+  background: rgba(10, 16, 19, 0.5019607843);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
+.works-web {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work3-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 176px 0 112px;
+}
+.works-web::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0D0C07;
+  opacity: 0.5;
+  top: 0;
+}
+.works-web-img {
+  z-index: 1;
+}
+.works-web-img img {
+  max-width: 100%;
+  height: auto;
+}
 
 @media (max-width: 992px) {
   .works-content {
@@ -456,6 +546,7 @@ h4 {
     padding: 40px 24px;
   }
   .works-card ul {
+    justify-content: center;
     -moz-column-gap: 8px;
          column-gap: 8px;
     padding-right: 0;
@@ -475,12 +566,19 @@ h4 {
   .works-card-items h3 {
     color: #1E1E1E;
   }
+  .works-APP {
+    padding: 400px 0;
+  }
+  .works-APP::after {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .works-content {
     padding: 0;
   }
   .works-card {
+    background: #fff;
     padding: 24px 24px 48px;
     margin-left: 0;
   }
@@ -503,6 +601,15 @@ h4 {
     -moz-column-gap: 12px;
          column-gap: 12px;
   }
+  .works-APP {
+    padding: 295px 0;
+  }
+  .works-web {
+    padding: 0;
+  }
+  .works-web-img {
+    padding: 120px 40px;
+  }
 }
 @media (max-width: 375px) {
   .works-title {
@@ -523,5 +630,64 @@ h4 {
   .works-card-items {
     border-bottom: 0px;
     margin-bottom: 0px;
+  }
+  .works-APP {
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-work2-sm.png);
+    padding: 195px 0;
+  }
+  .works-web-card ul {
+    padding: 16px 6px 20px;
+  }
+  .works-web-img {
+    padding: 90px 40px;
+  }
+}
+.serve {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/homepage-services-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.serve a {
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+  padding: 16px 32px;
+}
+.serve span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+.serve-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 80px 0;
+}
+.serve-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 306px;
+  height: 306px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/service-item-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+.serve-list li img, .serve-list li h3 {
+  color: #fff;
+  z-index: 1;
+}
+
+@media (max-width: 375px) {
+  .serve-list {
+    padding: 40px 34.5px;
   }
 }/*# sourceMappingURL=all.css.map */
