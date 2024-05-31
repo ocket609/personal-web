@@ -7,6 +7,14 @@
 .lh-1_5 {
     line-height: 1.5;
 }
+@include pad-s {
+    .lh-m-1_2 {
+        line-height: 1.2;
+    }
+    .lh-m-1_5 {
+        line-height: 1.5;
+    }
+}
 // font-weight
 .fw-700 {
     font-weight: 700;
@@ -30,6 +38,9 @@
     font-size: 20px;
 }
 @include pad-s {
+    .fz-s-16 {
+        font-size: 16px;
+    }
     .fz-s-20 {
         font-size: 20px;
     }
@@ -67,6 +78,11 @@
 .pb-24 {
     padding-bottom: 24px;
 }
-/*.mr-312 {
-    margin-right: -312px;
-}*/
+.pb-40 {
+    padding-bottom: 40px;
+}
+@include mobile {
+    .pb-s-24 {
+        padding-bottom: 24px;
+    }
+}
