@@ -69,10 +69,16 @@
             color: #000;
             font-size: 40px;
         }
-        .open {
+        .open, .close {
             display: flex;
         }
-        .close {
+        /*.close {
+            display: none;
+        }*/
+        /*.dropdown-open {
+            display: flex;
+        }*/
+        .dropdown-close {
             display: none;
         }
     }
@@ -105,10 +111,19 @@
             row-gap: 24px;
             flex-wrap: wrap;
             flex-direction: column;
+            background: #fff;
+            padding: 40px 0;
+            z-index: 1;
         }
         .list {
             display: block;
         }
+        .dropdown-open {
+            display: flex;
+        }
+        /*.dropdown-close {
+            display: none;
+        }*/
     }
 }
 @include mobile {

@@ -62,6 +62,9 @@
 .color-white {
     color: #fff;
 }
+.color-919191 {
+    color: #919191;
+}
 @include ps-s {
     .color-secondary-ps {
         color: #5B5B5B;
@@ -81,8 +84,20 @@
 .pb-40 {
     padding-bottom: 40px;
 }
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-24 {
+    margin-top: 24px;
+}
+.mb-24 {
+    margin-bottom: 24px;
+}
 @include mobile {
     .pb-s-24 {
         padding-bottom: 24px;
+    }
+    .mb-s-8 {
+        margin-bottom: 8px;
     }
 }
