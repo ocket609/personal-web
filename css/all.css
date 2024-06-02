@@ -64,9 +64,6 @@ table {
   box-sizing: border-box;
 }
 
-/** {
-    outline: 1px solid #000;
-}*/
 body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.2;
@@ -862,10 +859,14 @@ h4 {
 }
 .footer {
   background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-lg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+}
+.footer-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 0;
 }
 .footer-title img {
   width: 120px;
@@ -901,8 +902,12 @@ h4 {
 }
 @media (max-width: 576px) {
   .footer {
-    flex-direction: column;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-sm.png");
+    width: auto;
     padding: 40px 12px;
+  }
+  .footer-main {
+    flex-direction: column;
   }
   .footer-title {
     display: flex;

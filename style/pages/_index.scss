@@ -575,10 +575,14 @@
 // footer
 .footer {
     background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-lg.png");
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 80px 0;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     &-title {
         img {
             width: 120px;
@@ -615,8 +619,12 @@
 }
 @include pad-s {
     .footer {
-        flex-direction: column;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2024%20web-camp/footer-bg-sm.png");
+        width: auto;
         padding: 40px 12px;
+        &-main {
+            flex-direction: column;
+        }
         &-title {
             display: flex;
             flex-direction: column;
